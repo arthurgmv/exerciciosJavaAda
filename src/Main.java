@@ -25,10 +25,10 @@ public class Main {
         System.out.println("\nNotificações para compras não pagas:");
 
         compras.stream()
-                .filter(compra -> !compra.getIsPago())  // Compras não pagas
+                .filter(compra -> !compra.getIsPago())
                 .forEach(compra -> {
-                    enviarEmail.enviar(compra);  // Simulando envio por e-mail
-                    enviarSMS.enviar(compra);    // Simulando envio por SMS
+                    enviarEmail.enviar(compra);
+                    enviarSMS.enviar(compra);
                 });
     }
 }
